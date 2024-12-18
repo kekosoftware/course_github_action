@@ -1,0 +1,17 @@
+name: test
+
+on:
+  push:
+    branches: 
+      - main 
+      - develop
+  
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: ls
+        run: |
+          echo "Hola Ari" >> hola.txt
+          cat hola.txt
