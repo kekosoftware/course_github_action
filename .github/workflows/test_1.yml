@@ -1,6 +1,8 @@
 name: Hola Mundo
 
-on: [push]
+on:
+  - push
+  - pull_request
 
 jobs:
   Hola:
@@ -17,7 +19,7 @@ jobs:
 
       - name: Read file
         run: cat hola.txt 
-        
+
   other:
     runs-on: ubuntu-latest
     needs: [hola]
