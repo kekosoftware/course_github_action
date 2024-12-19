@@ -19,4 +19,8 @@ jobs:
 
     steps:
       - name: Test
-        run: echo "Dicho valor es $MY_VAR"
+        env:
+          STEP_MY_VAR: Nivel Step
+        run: |
+          echo "Dicho valor es $MY_VAR"
+          echo "Dicho valor es $MY_VAR"
