@@ -23,4 +23,4 @@ jobs:
           STEP_MY_VAR: Nivel Step
         run: |
           echo "Dicho valor es $MY_VAR"
-          echo "Dicho valor es $MY_VAR"
+          echo "Dicho valor es $STEP_MY_VAR"
