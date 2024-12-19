@@ -24,3 +24,4 @@ jobs:
         run: |
           echo "Dicho valor es $MY_VAR"
           echo "Dicho valor es $STEP_MY_VAR"
+          echo "Dicho valor ${{ vars.MY_VARIABLE_PAGE }}"
