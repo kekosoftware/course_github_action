@@ -26,3 +26,11 @@ jobs:
           echo "Dicho valor es $STEP_MY_VAR"
           echo "Dicho valor ${{ vars.MY_VARIABLE_PAGE }}"
           echo "Dicho valor ${{ secrets.MY_SECRET_VAR }}"
+
+      - name: SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" >> ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 127.0.1.1 >> ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts
