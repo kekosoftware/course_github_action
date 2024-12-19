@@ -19,4 +19,4 @@ jobs:
 
     steps:
       - name: Test
-        run: echo "Valor: $MY_VAR"
+        run: echo "Dicho valor es $MY_VAR"
